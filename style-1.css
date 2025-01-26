@@ -1,0 +1,201 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 960px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 800px;
+  overflow: scroll;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+
+.bg-light {
+  background-color: #E6E6FA; /* Example light gray background */
+}
+
+
+.recipe-categories:hover {
+  background-color: #f5f5f5; /* Lighten the background on hover */
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.logo h1 {
+  font-size: 24px;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center; 
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  margin-bottom: 10px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.search-bar button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.recipe-categories {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.row {
+  display: flex;
+  justify-content: space-between; 
+  width: 100%; 
+}
+
+.category {
+  width: calc(33.33% - 10px); /* Adjust width for 3 columns */
+  margin: 10px; 
+}
+
+.category img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.container {
+  transition: transform 0.3s ease; /* Transition duration and easing function */
+}
+
+.container:hover {
+  transform: translateX(-20px); /* Shift the content slightly on hover */
+}
+
+.trending-recipes:hover {
+  transform: translateX(-20px); /* Shift the content slightly on hover */
+}
+
+.category img {
+  transition: transform 0.3s ease; /* Apply a 0.3s ease-in-out transition to the transform property */
+}
+
+.category:hover img {
+  transform: scale(1.1); /* Increase the size of the image on hover */
+}
+
+
+.trending-recipes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.load-more button {
+  background-color: #007bff; /* Blue background */
+  color: #fff; /* White text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer; 
+}
+
+.load-more {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.load-more a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.quick-links,
+.social-media {
+  list-style: none;
+  padding: 0;
+}
+
+.quick-links li,
+.social-media li {
+  margin-bottom: 5px;
+}
+
+.quick-links a,
+.social-media a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.log-out button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer; 
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%; /* Make the login button full width */

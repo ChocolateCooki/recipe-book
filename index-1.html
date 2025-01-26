@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grandma's Kitchen</title>
+  <link rel="stylesheet" href="style-1.css">
+</head>
+<body>
+
+  <div class="container">
+    <header class="bg-light">
+      <div class="logo">
+        <img src="logo.png" alt="Logo" width="75" height="70">
+      </div>
+      <nav>
+        <ul>
+          <li><button><a href="index-1.html" style="color: white;">Home</a></button></li>
+          <li><button><a href="index-5.html" style="color: white;">Recipes</a></button></li>
+          <li><button><a href="index-3.html" style="color: white;">Sign in</a></button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="content">
+      <h1>Grandma's Kitchen</h1>
+      <p>Welcome to Grandma's Kitchen, where we share delicious and heartwarming recipes passed down through generations. Explore a variety of dishes, from comforting classics to exciting new creations, and rediscover the joy of cooking with family and friends.</p>
+
+      <div class="search-bar">
+        <button><a href="index-5.html" style="color: white;">Search</a></button>
+      </div>
+
+      <h3>We have recipes for...</h3>
+      <div class="recipe-categories">
+  <div class="row">
+    <div class="category">
+	<a href="breakfast.html">
+      <img src="breakfast.JPEG" alt="Breakfast">
+	</a>
+      <h3>Breakfast</strong></h3>
+    </div>
+
+    <div class="category">
+	<a href="lunch.html">
+      <img src="lunch.JPEG" alt="Lunch">
+	</a>
+      <h3>Lunch</h3>
+    </div>
+
+    <div class="category">
+	<a href="dinner.html">
+      <img src="dinner.JPEG" alt="Dinner">
+	</a>
+      <h3>Dinner</h3>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="category">
+	<a href="drinks.html">
+      <img src="drinks.JPEG" alt="Drinks">
+	</a>
+      <h3>Drinks & Beverages</h3>
+    </div>
+    <div class="category">
+	<a href="snacks.html">
+      <img src="snacks.JPEG" alt="Snacks">
+	</a>
+      <h3>Snacks & Desserts</h3>
+    </div>
+  </div>
+
+
+ 
+<h1>Trending Menus</h1>
+<div class="trending-recipes">
+  <div class="recipe-text">
+    <h2><a href = "13.html">Kottu Roti</a></h2>
+    <p>Kottu roti is a popular Sri Lankan street food made by stir-frying chopped godamba roti with vegetables, meat, and spices. It’s often served with curry sauce and spicy sambol, offering a delicious mix of textures and flavors. This hearty dish is a beloved comfort food in Sri Lanka.</p>
+  </div>
+  <div class="recipe-image">
+    <a href="13.html">
+    <img src="kottu.JPEG" alt="Recipe Image" width="250" height="200">
+    </a>
+ </div>
+</div>
+<div class="trending-recipes">
+  <div class="recipe-text">
+    <h2><a href="3.html">Hoppers</a></h2>
+    <p>Hoppers, or appa, are a popular Sri Lankan dish made from a fermented rice flour batter. These bowl-shaped pancakes have crispy edges and a soft, fluffy center. They are often served with accompaniments like dhal curry, sambol, or a fried egg placed in the center. A variation, milk hoppers, includes a touch of coconut milk for a creamy flavor. Enjoyed at any time of day, hoppers are a delicious and versatile staple in Sri Lankan cuisine.</p>
+  </div>
+  <div class="recipe-image">
+    <a href="3.html">
+    <img src="hoppers.JPEG" alt="Recipe Image" width="250" height="200">
+    </a>
+  </div>
+</div>
+
+
+</div>
+
+    <footer class="bg-light">
+      <div class="quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index-5.html">Search</a></li>
+          <li><a href="index-3.html">Sign up</a></li>
+          <li><a href="index-2.html">Create Account</a></li>
+        </ul>
+      </div>
+      <div class="social-media">
+        <h3>Follow us on</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/c/Ap%C3%A9Amma">Youtube</a></li>
+          <li><a href="https://web.facebook.com/ApeAmmaFans?_rdc=1&_rdr#">Facebook</a></li>
+          <li><a href="https://www.instagram.com/apeammachannel/">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="log-out">
+        <button><a href="index-1.html" style="color: white;">Log out</a></button>
+      </div>
+    </footer>
+
+  </div>
+	<script>
+	// Add hover effect to navigation buttons
+const navButtons = document.querySelectorAll('nav button');
+
+navButtons.forEach(button => {
+  button.addEventListener('mouseover', () => {
+    button.style.backgroundColor = '#005cbf'; // Change background color on hover
+  });
+
+  button.addEventListener('mouseout', () => {
+    button.style.backgroundColor = '#007bff'; // Revert background color on mouseout
+  });
+});
+
+// Add smooth scrolling to recipe links
+const recipeLinks = document.querySelectorAll('.recipe-text a');
+
+recipeLinks.forEach(link => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent default anchor tag behavior
+
+    const targetSection = document.getElementById(link.getAttribute('href').slice(1)); // Extract target section ID from href attribute
+
+    if (targetSection) {
+      smoothScroll(targetSection); // Call smooth scroll function
+    }
+  });
+});
+
+function smoothScroll(targetSection) {
+  const currentY = window.scrollY; // Get current scroll position
+  const targetY = targetSection.offsetTop; // Get target section offset from top
+
+  const scrollDistance = targetY - currentY; // Calculate scroll distance
+  const scrollDuration = 500; // Adjust scroll duration (milliseconds)
+
+  let start = null;
+
+  function animate(timestamp) {
+    if (!start) start = timestamp;
+    const time = timestamp - start;
+
+    const easeInOutQuad = time => (time /= duration / 2) < 1 ? 0.5 * time * time : -0.5 * ((--time) * (time - 2) - 1);
+    // Adjust the easing function if desired (e.g., linear, easeIn, easeOut)
+
+    const newY = currentY + scrollDistance * easeInOutQuad(time / scrollDuration);
+
+    window.scrollTo(0, newY);
+
+    if (time < scrollDuration) {
+      window.requestAnimationFrame(animate);
+    } else {
+      window.scrollTo(0, targetY); // Ensure final scroll position
+    }
+  }
+
+  window.requestAnimationFrame(animate);
+}
+	</script>
+
+</body>
+</html>
